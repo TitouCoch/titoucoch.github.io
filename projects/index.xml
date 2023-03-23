@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Titou Coch</title>
+    <link>https://titoucoch.github.io/projects/</link>
+    <description>Recent content in Projects on Titou Coch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Apr 2022 14:04:35 +0100</lastBuildDate><atom:link href="https://titoucoch.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Representation</title>
+      <link>https://titoucoch.github.io/projects/representation_data/</link>
+      <pubDate>Wed, 20 Apr 2022 14:04:35 +0100</pubDate>
+      
+      <guid>https://titoucoch.github.io/projects/representation_data/</guid>
+      <description>Represent complex data on a Heat Map Simple application to visualize road accidents in the city of Lille. I recovered an open source database of past road accidents with conditions. Accident Database : Table Data Example Cause Intersection, Passing, Parking, Drunkenness&amp;hellip; Date 1985-01-07 18:10:00, 1999-10-10 17:10:00, 1998-02-25 06:55:00&amp;hellip; Condition Moist, Wet, Freezing, Snow cover, Muddy Fat&amp;hellip; Involved Bicycle, Bus, Light car, truck, Pedestrian minus 10 years&amp;hellip; Weather Fair weather, Heavy rain, Snow, Strong storm wind, Mist&amp;hellip; Location Latitude (10430), Longitude(10430)&amp;hellip; Brightness Half day, Light night, Insufficient night light, Night without lighting&amp;hellip; Risk Normal, Dangerous, Very Dangerous&amp;hellip; Involvement Human, Two wheels, Vehicle, Other reason&amp;hellip; I connect to the database using the python library named pymysql import pymysql conn = pymysql.</description>
+    </item>
+    
+    <item>
+      <title>Graph Path</title>
+      <link>https://titoucoch.github.io/projects/graph_path/</link>
+      <pubDate>Sun, 20 Feb 2022 14:12:55 +0100</pubDate>
+      
+      <guid>https://titoucoch.github.io/projects/graph_path/</guid>
+      <description>Apply multiple algorithms on graphs Grap : The graph is composed of the 465 bus stop GPS coordinates of the BAB (Biaritz, Anglet, Bayonne) region in France Development I have developed a graph traversal application using Python and the libraries Tkinter and Graphics. The application applies various well-known algorithms such as A*, Dijkstra, Floyd-Warshall, and Bellman-Ford on a bus stop map. The application features a menu and a graphical map where the results can be observed.</description>
+    </item>
+    
+  </channel>
+</rss>

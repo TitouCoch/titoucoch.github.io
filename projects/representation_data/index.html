@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en-us"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Data Representation - Titou Coch</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  <meta name="description" content="Represent complex data on a Heat Map Simple application to visualize road accidents in the city of Lille. I recovered an open source database of past road accidents with conditions. Accident Database : Table Data Example Cause Intersection, Passing, Parking, Drunkenness&hellip; Date 1985-01-07 18:10:00, 1999-10-10 17:10:00, 1998-02-25 06:55:00&hellip; Condition Moist, Wet, Freezing, Snow cover, Muddy Fat&hellip; Involved Bicycle, Bus, Light car, truck, Pedestrian minus 10 years&hellip; Weather Fair weather, Heavy rain, Snow, Strong storm wind, Mist&hellip; Location Latitude (10430), Longitude(10430)&hellip; Brightness Half day, Light night, Insufficient night light, Night without lighting&hellip; Risk Normal, Dangerous, Very Dangerous&hellip; Involvement Human, Two wheels, Vehicle, Other reason&hellip; I connect to the database using the python library named pymysql import pymysql conn = pymysql." />
+  <meta name="author" content="Welcome!" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://titoucoch.github.io/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://titoucoch.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="https://titoucoch.github.io/theme.png" />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/ef333c1203724d1cb48104b2679529bb?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://titoucoch.github.io/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://titoucoch.github.io/github.svg" />
+  
+  <link rel="preload" as="image" href="https://titoucoch.github.io/instagram.svg" />
+  
+
+  
+  <link rel="icon" href="https://titoucoch.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://titoucoch.github.io/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.111.3">
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Data Representation" />
+<meta property="og:description" content="Represent complex data on a Heat Map Simple application to visualize road accidents in the city of Lille. I recovered an open source database of past road accidents with conditions. Accident Database : Table Data Example Cause Intersection, Passing, Parking, Drunkenness&hellip; Date 1985-01-07 18:10:00, 1999-10-10 17:10:00, 1998-02-25 06:55:00&hellip; Condition Moist, Wet, Freezing, Snow cover, Muddy Fat&hellip; Involved Bicycle, Bus, Light car, truck, Pedestrian minus 10 years&hellip; Weather Fair weather, Heavy rain, Snow, Strong storm wind, Mist&hellip; Location Latitude (10430), Longitude(10430)&hellip; Brightness Half day, Light night, Insufficient night light, Night without lighting&hellip; Risk Normal, Dangerous, Very Dangerous&hellip; Involvement Human, Two wheels, Vehicle, Other reason&hellip; I connect to the database using the python library named pymysql import pymysql conn = pymysql." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://titoucoch.github.io/projects/representation_data/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2022-04-20T14:04:35+01:00" />
+<meta property="article:modified_time" content="2022-04-20T14:04:35+01:00" />
+
+  
+  <meta itemprop="name" content="Data Representation">
+<meta itemprop="description" content="Represent complex data on a Heat Map Simple application to visualize road accidents in the city of Lille. I recovered an open source database of past road accidents with conditions. Accident Database : Table Data Example Cause Intersection, Passing, Parking, Drunkenness&hellip; Date 1985-01-07 18:10:00, 1999-10-10 17:10:00, 1998-02-25 06:55:00&hellip; Condition Moist, Wet, Freezing, Snow cover, Muddy Fat&hellip; Involved Bicycle, Bus, Light car, truck, Pedestrian minus 10 years&hellip; Weather Fair weather, Heavy rain, Snow, Strong storm wind, Mist&hellip; Location Latitude (10430), Longitude(10430)&hellip; Brightness Half day, Light night, Insufficient night light, Night without lighting&hellip; Risk Normal, Dangerous, Very Dangerous&hellip; Involvement Human, Two wheels, Vehicle, Other reason&hellip; I connect to the database using the python library named pymysql import pymysql conn = pymysql."><meta itemprop="datePublished" content="2022-04-20T14:04:35+01:00" />
+<meta itemprop="dateModified" content="2022-04-20T14:04:35+01:00" />
+<meta itemprop="wordCount" content="310">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Data Representation"/>
+<meta name="twitter:description" content="Represent complex data on a Heat Map Simple application to visualize road accidents in the city of Lille. I recovered an open source database of past road accidents with conditions. Accident Database : Table Data Example Cause Intersection, Passing, Parking, Drunkenness&hellip; Date 1985-01-07 18:10:00, 1999-10-10 17:10:00, 1998-02-25 06:55:00&hellip; Condition Moist, Wet, Freezing, Snow cover, Muddy Fat&hellip; Involved Bicycle, Bus, Light car, truck, Pedestrian minus 10 years&hellip; Weather Fair weather, Heavy rain, Snow, Strong storm wind, Mist&hellip; Location Latitude (10430), Longitude(10430)&hellip; Brightness Half day, Light night, Insufficient night light, Night without lighting&hellip; Risk Normal, Dangerous, Very Dangerous&hellip; Involvement Human, Two wheels, Vehicle, Other reason&hellip; I connect to the database using the python library named pymysql import pymysql conn = pymysql."/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href="https://titoucoch.github.io/"
+      >Titou Coch</a
+    >
+    <div
+      class="btn-dark text-[0] ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/experience/"
+        >Experience</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/projects/"
+        >Projects</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/CochTitou"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/TitouCoch"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/__tit0u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-16 pb-24 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">Data Representation</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Apr 20, 2022</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h3 id="represent-complex-data-on-a-heat-map">Represent complex data on a Heat Map</h3>
+<br/>
+Simple application to visualize road accidents in the city of Lille. I recovered an open source database of past road accidents with conditions.
+<br/>
+<br/>
+<h3 id="accident-database-">Accident Database :</h3>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Data Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cause</td>
+<td>Intersection, Passing, Parking, Drunkenness&hellip;</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>1985-01-07 18:10:00, 1999-10-10 17:10:00, 1998-02-25 06:55:00&hellip;</td>
+</tr>
+<tr>
+<td>Condition</td>
+<td>Moist, Wet, Freezing, Snow cover, Muddy Fat&hellip;</td>
+</tr>
+<tr>
+<td>Involved</td>
+<td>Bicycle, Bus, Light car, truck, Pedestrian minus 10 years&hellip;</td>
+</tr>
+<tr>
+<td>Weather</td>
+<td>Fair weather, Heavy rain, Snow, Strong storm wind, Mist&hellip;</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Latitude (10430), Longitude(10430)&hellip;</td>
+</tr>
+<tr>
+<td>Brightness</td>
+<td>Half day, Light night, Insufficient night light, Night without lighting&hellip;</td>
+</tr>
+<tr>
+<td>Risk</td>
+<td>Normal, Dangerous, Very Dangerous&hellip;</td>
+</tr>
+<tr>
+<td>Involvement</td>
+<td>Human, Two wheels, Vehicle, Other reason&hellip;</td>
+</tr>
+</tbody>
+</table>
+<br/>
+I connect to the database using the python library named pymysql 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pymysql
+</span></span><span style="display:flex;"><span>conn <span style="color:#f92672">=</span> pymysql<span style="color:#f92672">.</span>connect(host<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;localhost&#34;</span>,
+</span></span><span style="display:flex;"><span>                       port<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span>, user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root&#34;</span>,
+</span></span><span style="display:flex;"><span>                       passwd<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root&#34;</span>,
+</span></span><span style="display:flex;"><span>                       database<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Accident_Database&#34;</span>)
+</span></span><span style="display:flex;"><span>cursor <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span>cursor()
+</span></span></code></pre></div><br/>
+<p>In the first menu we find a brief description with two buttons, the user can choose a static or dynamic map. In the second menu the user chooses the weather, brightness and the month of the year of the accidents he wants to consult
+<img src="/data/menu.png"/></p>
+<p>Once the parameters are validated, it is executed in the database and a dataframe (pandas library) is loaded with the result of the query, that is to say all the accidents corresponding to the parameters chosen</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> MLieu.x,MLieu.y,(nb_morts<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span><span style="color:#f92672">+</span>nb_blesses_graves<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span><span style="color:#f92672">+</span>nb_blesses_legers) <span style="color:#66d9ef">AS</span> gravite 
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">FROM</span> MAccident 
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">JOIN</span> MLieu <span style="color:#66d9ef">ON</span> MLieu.lieu_id<span style="color:#f92672">=</span>MAccident.lieu_id 
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">JOIN</span> MLuminosite <span style="color:#66d9ef">ON</span> MAccident.lum_id<span style="color:#f92672">=</span>MLuminosite.code 
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">JOIN</span> MIntemperie <span style="color:#66d9ef">ON</span> MIntemperie.code<span style="color:#f92672">=</span>MAccident.intemp_id 
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">JOIN</span> MDate <span style="color:#66d9ef">ON</span> MDate.date_id<span style="color:#f92672">=</span>MAccident.date_id 
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">WHERE</span> MLuminosite.libelle_luminosite<span style="color:#f92672">=</span>:luminosite 
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">AND</span> MIntemperie.libelle<span style="color:#f92672">=</span>:libelle 
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">MONTH</span>(MDate.DateFormatStandard)<span style="color:#f92672">=</span>:<span style="color:#66d9ef">month</span>;
+</span></span></code></pre></div><br/>
+The severity of the accident is weighted by the number of serious injuries and fatalities.
+<p>Each accident is represented by a heat point which is more or less important depending on the severity</p>
+<p>These heat points are placed on a layer according to their coordinates. The city map in the background is positioned in the same coordinate as the heat layer
+<img src="/data/heat-map.png" /></p>
+<br/>
+<p style="font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color:
+  margin-bottom: 20px;">Here is the Result</p>
+<img src="/data/evolutionAccident.png">
+Evolution of accidents over the months
+<br/>
+<img src="/data/zoom1.png">
+<img src="/data/zoom2.png">
+<img src="/data/zoom3.png">
+Zoom in on an accident</section>
+
+  
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="https://titoucoch.github.io/projects/graph_path/"
+      ><span>Graph Path</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://titoucoch.github.io/">Titou Coch</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >Theme Paper</a
+  >
+</footer>
+
+  </body>
+</html>
