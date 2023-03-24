@@ -1,112 +1,30 @@
 <!DOCTYPE html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <html
   class="not-ready text-sm lg:text-base"
   style="--bg: #faf6f1"
-  lang="en-us"
->
+  lang="en-us">
   <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <title>Titou Coch</title>
-
-  
   <meta name="theme-color" />
-
-  
-  
-  
-  
-  <meta
-    name="description"
-    content="A personal blog"
-  />
+  <meta name="description" content="A personal blog"/>
   <meta name="author" content="Welcome!" />
   
 
-  
-  
-  
-  
-  
-  
   <link rel="preload stylesheet" as="style" href="https://titoucoch.github.io/main.min.css" />
-
-  
-
-  
-   
   <link rel="preload" as="image" href="https://titoucoch.github.io/theme.png" />
-
-  
-  
-  
   <link rel="preload" as="image" href="https://www.gravatar.com/avatar/ef333c1203724d1cb48104b2679529bb?s=160&amp;d=identicon" />
-  
-  
-
-  
   <link rel="preload" as="image" href="https://titoucoch.github.io/twitter.svg" />
-  
   <link rel="preload" as="image" href="https://titoucoch.github.io/github.svg" />
-  
   <link rel="preload" as="image" href="https://titoucoch.github.io/instagram.svg" />
-  
-
-  
   <link rel="icon" href="https://titoucoch.github.io/favicon.ico" />
   <link rel="apple-touch-icon" href="https://titoucoch.github.io/apple-touch-icon.png" />
-
-  
   <meta name="generator" content="Hugo 0.111.3">
-
-  
-  
   <link
     rel="alternate"
     type="application/rss&#43;xml"
@@ -115,19 +33,11 @@
   />
   
 
-  
-  
-  
-  
-  
-  
-  
   <meta property="og:title" content="Titou Coch" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://titoucoch.github.io/" />
 
-  
   <meta itemprop="name" content="Titou Coch">
 <meta itemprop="description" content="">
   
@@ -135,7 +45,6 @@
 <meta name="twitter:title" content="Titou Coch"/>
 <meta name="twitter:description" content=""/>
 
-  
   
 </head>
 
@@ -267,40 +176,21 @@
 </header>
 
 
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-16 pb-24 dark:prose-invert"
-    >
+<main class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-16 pb-24 dark:prose-invert">
       
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
 
 
 
 <div class="-mt-2 mb-20 flex items-center">
   
   <div
-    class="mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow-xl dark:bg-white/80"
-  >
+    class="mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow-xl dark:bg-white/80">
     <img
       class="my-0 aspect-square w-16 rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
-      src="https://www.gravatar.com/avatar/ef333c1203724d1cb48104b2679529bb?s=160&amp;d=identicon"
+      src="https://s.gravatar.com/avatar/95989126f5f6383cdb48a30cd93c94a0?s=80"
       alt="Welcome!"
     />
   </div>
-  
   
   <div>
     <h1 class="my-2.5 text-3xl font-bold">Welcome!</h1>
@@ -312,53 +202,88 @@
 </div>
 
 
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h2 class="!my-0 pb-1 !leading-none">Data Representation</h2>
-  <time class="text-sm opacity-60"
-    >Apr 20, 2022</time
-  >
-  <a class="absolute inset-0 text-[0]" href="https://titoucoch.github.io/projects/representation_data/">Data Representation</a>
+<section class="container" aria-label="Deuxième section bouton">
+  <article aria-label="Bouton d'accès au CV">
+      <a href="CV_.pdf">
+          <span>Resume</span>
+      </a>
+  </article>
 </section>
 
 
+<style>
+.container{
+    display:flex;
+    justify-content: center;
+}
+.container article a{
+    position: relative;
+    width: 370px;
+    height:100px;
+    display: inline-block;
+    background: rgb(0, 0, 0);
+    margin: 20px;
+}
 
+.container article a:before,
+.container article a:after
+{
+    content:'';
+    position: absolute;
+    inset: 0;
+    background: #f00;
+    transition: 0.5s;
+}
 
+.container article a:nth-child(1):before,
+.container article a:nth-child(1):after
+{
+    background: linear-gradient(45deg,#f3af0b,black,#07a4ff);
+}
 
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h2 class="!my-0 pb-1 !leading-none">Graph Path</h2>
-  <time class="text-sm opacity-60"
-    >Feb 20, 2022</time
-  >
-  <a class="absolute inset-0 text-[0]" href="https://titoucoch.github.io/projects/graph_path/">Graph Path</a>
-</section>
+.container article a:nth-child(2):before,
+.container article a:nth-child(2):after
+{
+    background: linear-gradient(45deg,#07a4ff,black,#f3af0b);
+}
 
-
-
-
-
+.container article a:hover:before
+{
+    inset: -3px;
+}
+.container article a:hover:after
+{
+    inset: -3px;
+    filter: blur(10px);
+}
+.container article a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: black;
+    z-index:10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 3px solid #111;
+}
+</style>
 
     </main>
 
     <footer
-  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
->
-  <div class="mr-auto">
-    &copy; 2023
-    <a class="link" href="https://titoucoch.github.io/">Titou Coch</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >Powered by Hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >Theme Paper</a
-  >
-</footer>
-
+    class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+    <div class="mr-auto">
+      &copy; 2023
+      <a class="link" href="https://titoucoch.github.io/">Titou Coch</a>
+    </div>
+  </footer>
   </body>
 </html>
