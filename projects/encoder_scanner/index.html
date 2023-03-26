@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en-us"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Encoder, Scanner - Titou Coch</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  <meta name="description" content="Encoding information into a bar code and Scanner : In this project I developed an encoder to encode an amateur sportsman’s license in bar code form. After studying the different bar codes that exist and I chose to create a bar code in height and not in width. Especially inspired by the spotify code.
+For encoding : I start with information that is a string of ten characters which includes uppercase letters, miniscule letters and numbers ." />
+  <meta name="author" content="Welcome!" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://titoucoch.github.io/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://titoucoch.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="https://titoucoch.github.io/theme.png" />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/ef333c1203724d1cb48104b2679529bb?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://titoucoch.github.io/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://titoucoch.github.io/github.svg" />
+  
+  <link rel="preload" as="image" href="https://titoucoch.github.io/instagram.svg" />
+  
+
+  
+  <link rel="icon" href="https://titoucoch.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://titoucoch.github.io/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.111.3">
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Encoder, Scanner" />
+<meta property="og:description" content="Encoding information into a bar code and Scanner : In this project I developed an encoder to encode an amateur sportsman’s license in bar code form. After studying the different bar codes that exist and I chose to create a bar code in height and not in width. Especially inspired by the spotify code.
+For encoding : I start with information that is a string of ten characters which includes uppercase letters, miniscule letters and numbers ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://titoucoch.github.io/projects/encoder_scanner/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2022-08-20T20:04:26+01:00" />
+<meta property="article:modified_time" content="2022-08-20T20:04:26+01:00" />
+
+  
+  <meta itemprop="name" content="Encoder, Scanner">
+<meta itemprop="description" content="Encoding information into a bar code and Scanner : In this project I developed an encoder to encode an amateur sportsman’s license in bar code form. After studying the different bar codes that exist and I chose to create a bar code in height and not in width. Especially inspired by the spotify code.
+For encoding : I start with information that is a string of ten characters which includes uppercase letters, miniscule letters and numbers ."><meta itemprop="datePublished" content="2022-08-20T20:04:26+01:00" />
+<meta itemprop="dateModified" content="2022-08-20T20:04:26+01:00" />
+<meta itemprop="wordCount" content="559">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Encoder, Scanner"/>
+<meta name="twitter:description" content="Encoding information into a bar code and Scanner : In this project I developed an encoder to encode an amateur sportsman’s license in bar code form. After studying the different bar codes that exist and I chose to create a bar code in height and not in width. Especially inspired by the spotify code.
+For encoding : I start with information that is a string of ten characters which includes uppercase letters, miniscule letters and numbers ."/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href="https://titoucoch.github.io/"
+      >Titou Coch</a
+    >
+    <div
+      class="btn-dark text-[0] ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/experience/"
+        >Experience</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/projects/"
+        >Projects</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/CochTitou"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/TitouCoch"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/__tit0u"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-16 pb-24 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">Encoder, Scanner</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Aug 20, 2022</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h3 id="encoding-information-into-a-bar-code-and-scanner-">Encoding information into a bar code and Scanner :</h3>
+<p>In this project I developed an encoder to encode an amateur sportsman’s license in bar code form.
+After studying the different bar codes that exist and <em><strong>I chose to create a bar code in height</strong></em> and not in width.
+Especially inspired by the spotify code.</p>
+<img src="/scaner/code_bar_type.png"/>
+<hr>
+<p>For encoding : I start with information that is a string of ten characters which includes uppercase letters, miniscule letters and numbers .</p>
+<ol>
+<li>
+<h4 id="i-convert-each-character-into-a-6-bit-gray-code-word-to-form-a-binary-sentence">I convert each character into a 6-bit gray code word to form a binary sentence.</h4>
+</li>
+</ol>
+<p>(I chose the gray code encoding because it facilitates the management of errors when decoding information especially with the Viterbi Algorithm and the CRC code).</p>
+<ol start="2">
+<li>
+<h4 id="then-i-separate-the-binary-sentence-into-a-3-bit-word-i-associate-each-binary-word-into-a-bar-height-using-a-matching-table-so-i-get-a-list-of-bar-height">Then I separate the binary sentence into a 3-bit word, I associate each binary word into a bar height using a matching table. So I get a list of bar height.</h4>
+</li>
+<li>
+<h4 id="i-associate-each-height-of-the-list-with-a-graphic-element-of-the-page-to-form-the-bar-code">I associate each height of the list with a graphic element of the page to form the bar code</h4>
+</li>
+</ol>
+<img src="/scaner/encoding.png"/>
+<br/>
+Once the license of each user has been encoded, it is now necessary to design a scanner to recover the license from the encoding.
+<p>The user will have access to a scan he can take a photo and this one will be processed.</p>
+<p>To carry out the image analysis I used the <em><strong>OPEN-CV library</strong></em> : a free library developed by Intel specialized in real-time image processing. I used it to retrieve the image matrix and do some processing there.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span> <span style="color:#75715e">//image playback to obtain a pixel matrix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">matriceImage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cv</span>.<span style="color:#a6e22e">imread</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">matriceImage</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">//conversion from matrix to gray scale
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> <span style="color:#a6e22e">cv</span>.<span style="color:#a6e22e">cvtColor</span>(<span style="color:#a6e22e">matriceImage</span>, <span style="color:#a6e22e">matriceImageNiveauDeGris</span>, <span style="color:#a6e22e">cv</span>.<span style="color:#a6e22e">COLOR_RGBA2GRAY</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">//detect the edges of objects
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> <span style="color:#a6e22e">cv</span>.<span style="color:#a6e22e">Canny</span>(<span style="color:#a6e22e">matriceImageNiveauDeGris</span>, <span style="color:#a6e22e">matriceImageAvecContours</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">3</span>, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">//retrieving contours of image objects
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> <span style="color:#a6e22e">cv</span>.<span style="color:#a6e22e">findContours</span>(<span style="color:#a6e22e">matriceImageAvecContours</span>, <span style="color:#a6e22e">contours</span>, <span style="color:#a6e22e">hierarchy</span>, <span style="color:#a6e22e">cv</span>.<span style="color:#a6e22e">RETR_EXTERNAL</span>, <span style="color:#a6e22e">cv</span>.<span style="color:#a6e22e">CHAIN_APPROX_NONE</span>);
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">//&lt;img src=&#34;/scaner/.png&#34;/&gt;
+</span></span></span></code></pre></div><br/>
+We use the two reference balls located before the first bar and after the last bar to rotate if necessary the matrix to obtain values of correct height
+<img src="/scaner/rotate.png"/>
+<br/>
+To have a more precise processing area, the image matrix is reduced to the height of the logo on the left and the width between the logo and the second reference ball.
+<p>Objects of too small size are removed from the matrix. This can be noise on the image or a reflection on the photo.</p>
+<img src="/scaner/filtre.png"/>
+<br/>
+Using the contours of the objects, we recover the highest and lowest point to have their heights. 
+<ol>
+<li>
+<p>We calculate for each bar of the bar code the ratio between the reference height which is the logo on the left and the height of the bar. By taking a ratio we are sure that even if the bar code is enlarged or narrowed the difference between the bar heights and the logo height remains the same.</p>
+</li>
+<li>
+<p>All ratios are added to a list.</p>
+</li>
+<li>
+<p>We convert each ratio using a matching table into a binary word</p>
+</li>
+</ol>
+<img src="/scaner/ratio.png"/>
+<br/>
+I divide my sentence into binary (gray code) in 6-bit binary word and then convert each word to its associated character using a matching table
+<img src="/scaner/graycode.png"/>
+<br/>
+So I now have a license number, I check that this number exists in my database using a server request. If the word exists then I want to recover the information of the person with this license number otherwise I restart my image processing 
+<img src="/scaner/testLicence.png"/>
+<br/>
+<p style="font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color:
+  margin-bottom: 20px;">Here is the Result</p>
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/yIwK6I5z2Yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>Selection in a user’s database.</p>
+<p>Encoding its license as a bar code.</p>
+<p>Scans its barcode to retrieve user information.</p>
+</section>
+
+  
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="https://titoucoch.github.io/projects/representation_data/"
+      ><span>Data Representation</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://titoucoch.github.io/">Titou Coch</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >Theme Paper</a
+  >
+</footer>
+
+  </body>
+</html>

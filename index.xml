@@ -6,7 +6,17 @@
     <description>Recent content on Titou Coch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Apr 2022 14:04:35 +0100</lastBuildDate><atom:link href="https://titoucoch.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Aug 2022 20:04:26 +0100</lastBuildDate><atom:link href="https://titoucoch.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Encoder, Scanner</title>
+      <link>https://titoucoch.github.io/projects/encoder_scanner/</link>
+      <pubDate>Sat, 20 Aug 2022 20:04:26 +0100</pubDate>
+      
+      <guid>https://titoucoch.github.io/projects/encoder_scanner/</guid>
+      <description>Encoding information into a bar code and Scanner : In this project I developed an encoder to encode an amateur sportsman’s license in bar code form. After studying the different bar codes that exist and I chose to create a bar code in height and not in width. Especially inspired by the spotify code.
+For encoding : I start with information that is a string of ten characters which includes uppercase letters, miniscule letters and numbers .</description>
+    </item>
+    
     <item>
       <title>Data Representation</title>
       <link>https://titoucoch.github.io/projects/representation_data/</link>
