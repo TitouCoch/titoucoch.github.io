@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://titoucoch.github.io/experience/athome/</loc>
+    <lastmod>2023-04-01T20:04:26+01:00</lastmod>
+  </url><url>
+    <loc>https://titoucoch.github.io/experience/</loc>
+    <lastmod>2023-04-01T20:04:26+01:00</lastmod>
+  </url><url>
+    <loc>https://titoucoch.github.io/</loc>
+    <lastmod>2023-04-01T20:04:26+01:00</lastmod>
+  </url><url>
     <loc>https://titoucoch.github.io/projects/</loc>
     <lastmod>2023-02-20T19:20:33+02:00</lastmod>
   </url><url>
     <loc>https://titoucoch.github.io/projects/sport_track/</loc>
-    <lastmod>2023-02-20T19:20:33+02:00</lastmod>
-  </url><url>
-    <loc>https://titoucoch.github.io/</loc>
     <lastmod>2023-02-20T19:20:33+02:00</lastmod>
   </url><url>
     <loc>https://titoucoch.github.io/projects/encoder_scanner/</loc>

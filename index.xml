@@ -6,7 +6,17 @@
     <description>Recent content on Titou Coch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Feb 2023 19:20:33 +0200</lastBuildDate><atom:link href="https://titoucoch.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Apr 2023 20:04:26 +0100</lastBuildDate><atom:link href="https://titoucoch.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Athome Solution</title>
+      <link>https://titoucoch.github.io/experience/athome/</link>
+      <pubDate>Sat, 01 Apr 2023 20:04:26 +0100</pubDate>
+      
+      <guid>https://titoucoch.github.io/experience/athome/</guid>
+      <description>Internship Experience as Software Developper During my 3-month internship at Athome Solution, a web application company based in Bordeaux , France. I had the opportunity to work on an exciting project involving web APIs. One of my key contributions was developing a program that retrieves their web APIs from the project and parses them to generate automated test suites.
+In addition, I implemented continuous integration to ensure that each push or merge of code to the main branch of the project triggers API testing and generates test results.</description>
+    </item>
+    
     <item>
       <title>Sport-Track Web Site</title>
       <link>https://titoucoch.github.io/projects/sport_track/</link>
