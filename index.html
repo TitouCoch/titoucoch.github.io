@@ -203,17 +203,22 @@
 
 <section class="container" aria-label="Deuxième section bouton">
   <article aria-label="Bouton d'accès au CV">
-      <a href="CV_COCHERIL.pdf">
+      <a href="./mainPage/CV_COCHERIL.pdf">
           <span>Resume</span>
       </a>
   </article>
 </section>
 
 
+<div id="containerGlobe" width="100vw" height="100vh"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src='./mainPage/globe.js'></script>
+
 <style>
 .container{
     display:flex;
     justify-content: center;
+    margin-bottom: 80px;
 }
 .container article a{
     position: relative;
@@ -273,6 +278,12 @@
     color: #fff;
     border: 3px solid #111;
 }
+
+#containerGlobe {
+  display:flex;
+  justify-content: center;
+}
+
 </style>
 
     </main>
