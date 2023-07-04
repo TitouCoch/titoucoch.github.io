@@ -209,9 +209,9 @@
   </article>
 </section>
 
-
-<div id="containerGlobe" width="100vw" height="100vh"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<div id="containerGlobe"></div>
+<span id="destination"></span>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
 <script src='./mainPage/globe.js'></script>
 
 <style>
@@ -280,6 +280,11 @@
 }
 
 #containerGlobe {
+  display:flex;
+  justify-content: center;
+}
+
+#destination{
   display:flex;
   justify-content: center;
 }

@@ -1,12 +1,26 @@
 //get the DOM element in which you want to attach the scene
-const containerGlobe = document.querySelector('#containerGlobe');
+const container = document.querySelector('#containerGlobe');
+const country = document.getElementById('destination');
+
+
+// Create an array of country data
+const countryData = [
+    { name: 'Malta', lat: 34.9375, lon: 104.375 },
+    { name: 'France', lat: 46.603354, lon: 91.888334 },
+    { name: 'Spain', lat: 39.463667, lon: 85.74922 },
+    { name: 'England', lat: 52.5074, lon: 88.1278 },
+    { name: 'Latvia', lat: 56.8796, lon: 114.6032 },
+    { name: 'Estonia', lat: 58.8796, lon: 114.6032 },
+    { name: 'Lithuania', lat: 54.9, lon: 113.3032 },
+    { name: 'Italy', lat: 42, lon: 104.371 }
+  ];
 
 //create a WebGL renderer
 const renderer = new THREE.WebGLRenderer();
 
 //set the attributes of the renderer
 const WIDTH = window.innerWidth - 700;
-const HEIGHT = window.innerHeight - 300;
+const HEIGHT = window.innerHeight - 100;
 
 //set the renderer size
 renderer.setSize(WIDTH, HEIGHT);
@@ -34,15 +48,13 @@ camera.position.set( 0, 0, 500 );
 const scene = new THREE.Scene();
 
 //set the scene background
-scene.background = new THREE.Color(0x000);
+scene.background = new THREE.Color( 0x000 );
 
 //add the camera to the scene.
 scene.add(camera);
 
-
-
 // Attach the renderer to the DOM element.
-containerGlobe.appendChild(renderer.domElement);
+container.appendChild(renderer.domElement);
 
 //Three.js uses geometric meshes to create primitive 3D shapes like spheres, cubes, etc. I’ll be using a sphere.
 
@@ -58,24 +70,13 @@ scene.add(globe);
 
 
 // Create a red dot material
-const dotMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+const dotMaterial = new THREE.MeshBasicMaterial({ color: 0xffa500 });
 // Create a red dot
 
 // Create a red dot geometry
 const dotGeometry = new THREE.SphereGeometry(3, 32, 32); // Augmenter le rayon du point à 5
 
-const clickableDots = [];
-
-// Create an array of country data
-const countryData = [
-    { name: 'Malta', lat: 34.9375, lon: 104.375 },
-    { name: 'France', lat: 46.603354, lon: 91.888334 },
-    { name: 'Spain', lat: 39.463667, lon: 85.74922 },
-    { name: 'England', lat: 52.5074, lon: 88.1278 },
-    { name: 'Latvia', lat: 56.8796, lon: 114.6032 },
-    { name: 'Italy', lat: 42, lon: 104.371 }
-  ];
-  
+const clickableDots = [];  
 
   // Loop through the country data and create clickable dots
   countryData.forEach((country) => {
@@ -93,7 +94,48 @@ const countryData = [
     dot.position.set(x, y, z);
     globe.add(dot);
     clickableDots.push({ mesh: dot, name: country.name });
+});
 
+
+// Loop through the clickable dots array and add click events
+clickableDots.forEach((dot) => {
+    dot.mesh.userData.countryName = dot.name; // Ajouter la propriété "countryName" au maillage du point
+
+    // Ajouter l'événement de clic au maillage du point
+    dot.mesh.addEventListener('click', onDotClick);
+});
+
+// Fonction de gestion de l'événement de clic sur un point
+function onDotClick(event) {
+    const countryName = event.target.userData.countryName; // Récupérer le nom du pays à partir de la propriété "countryName" du maillage du point
+    console.log('Pays cliqué :', countryName);
+}
+
+// Fonction pour convertir les coordonnées de l'événement de clic en coordonnées normalisées
+function getNormalizedMouseCoordinates(event) {
+    const rect = renderer.domElement.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    const y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    return { x, y };
+}
+
+// Ajouter l'événement de clic sur le rendu du globe
+renderer.domElement.addEventListener('click', (event) => {
+    const mouseCoordinates = getNormalizedMouseCoordinates(event);
+
+    // Lancer un rayon depuis la position de la souris
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(mouseCoordinates, camera);
+
+    // Rechercher les intersections avec les maillages des points
+    const intersects = raycaster.intersectObjects(clickableDots.map((dot) => dot.mesh));
+
+    if (intersects.length > 0) {
+        // Un point a été cliqué
+        const clickedDot = intersects[0].object;
+        const countryName = clickedDot.userData.countryName;
+        country.innerHTML = "("+countryName+")";
+    }
 });
 
 
@@ -118,6 +160,20 @@ loader.load( './globe.png', function ( texture ) {
 // Move the sphere back (z) so we can see it.
 globe.position.z = -300;
 
+//Lighting
+
+//create a point light (won't make a difference here because our material isn't affected by light)
+const pointLight =
+new THREE.PointLight(0xFFFFFF);
+
+//set its position
+pointLight.position.x = 10;
+pointLight.position.y = 50;
+pointLight.position.z = 400;
+
+//add light to the scene
+scene.add(pointLight);
+
 //Update
 
 //set update function to transform the scene and view
@@ -134,7 +190,7 @@ requestAnimationFrame(update);
 
 
 // Atmosphere
-const atmosphereRadius = RADIUS + 100; // Rayon de l'atmosphère (plus grand que le rayon du globe)
+const atmosphereRadius = RADIUS + 90; // Rayon de l'atmosphère (plus grand que le rayon du globe)
 const atmosphereGeometry = new THREE.SphereGeometry(atmosphereRadius, SEGMENTS, RINGS);
 const atmosphereMaterial = new THREE.ShaderMaterial({
     side: THREE.BackSide, // Afficher l'atmosphère à l'arrière du matériau
@@ -157,10 +213,6 @@ const atmosphereMaterial = new THREE.ShaderMaterial({
 });
 const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
 globe.add(atmosphere);
-
-
-
-
 
 
 // Mouse Interaction
@@ -219,4 +271,4 @@ function onMouseUp(event) {
 renderer.domElement.addEventListener('mousemove', onMouseMove);
 renderer.domElement.addEventListener('mousedown', onMouseDown);
 renderer.domElement.addEventListener('mouseup', onMouseUp);
-  
+
