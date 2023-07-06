@@ -209,10 +209,26 @@
   </article>
 </section>
 
-<div id="containerGlobe"></div>
+<div id="containerGlobe" style="display: none;"></div>
 <span id="destination"></span>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
-<script src='./mainPage/globe.js'></script>
+<script src="./mainPage/globe.js"></script>
+
+<script>
+  function checkScreenSize() {
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    if (screenWidth >= 1124) {
+        document.getElementById("containerGlobe").style.display = "block"; 
+    } else {
+        document.getElementById("containerGlobe").style.display = "none";
+    }
+  }
+
+  window.addEventListener("load", checkScreenSize);
+  window.addEventListener("resize", checkScreenSize);
+</script>
+
 
 <style>
 .container{

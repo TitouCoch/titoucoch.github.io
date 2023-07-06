@@ -15,6 +15,7 @@ const countryData = [
     { name: 'Italy', lat: 42, lon: 104.371 }
   ];
 
+
 //create a WebGL renderer
 const renderer = new THREE.WebGLRenderer();
 
